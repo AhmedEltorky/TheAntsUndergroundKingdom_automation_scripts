@@ -32,22 +32,22 @@ print("Starting watering...")
 
 while watering_count > 0:
     pyautogui.moveTo(start_x, start_y, duration=1)
-    time.sleep(1)
+    time.sleep(0.5)
     pydirectinput.click()
     pyautogui.moveTo(water_icon_x, water_icon_y, duration=1)
-    time.sleep(1)
+    time.sleep(0.5)
     pydirectinput.click()
     pyautogui.moveTo(water_dot_x, water_dot_y, duration=1)
-    time.sleep(1)
+    time.sleep(0.5)
     pydirectinput.click()
     pyautogui.moveTo(back_icon_x, back_icon_y, duration=1)
-    time.sleep(1)
+    time.sleep(0.5)
     pydirectinput.click()
 
     pyautogui.moveTo(start_x, start_y + delta_y, duration=1)
-    time.sleep(1)
+    time.sleep(0.5)
     pyautogui.dragTo(start_x, start_y - delta_y, duration=1)
-    time.sleep(1)
+    time.sleep(0.5)
 
     watering_count -= 1
 

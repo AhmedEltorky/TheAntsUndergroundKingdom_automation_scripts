@@ -21,18 +21,17 @@ wait_rally_time = 70  # in seconds
 print("You have 5 seconds to switch to the game window...")
 time.sleep(5)
 
+# Get the current mouse position for rally button
+attack_icon_x, attack_icon_y = pyautogui.position()
+
 # Click on the Rainbow Anagma to select it before running the script
 while rally_count > 0:
-    pyautogui.moveTo(attack_icon_x, attack_icon_y, duration=2)
-    time.sleep(1)
-    pydirectinput.click()
-
-    pyautogui.moveTo(ProUnit_x, ProUnit_y, duration=1)
-    time.sleep(1)
+    pyautogui.moveTo(attack_icon_x, attack_icon_y, duration=1)
+    time.sleep(0.5)
     pydirectinput.click()
 
     pyautogui.moveTo(march_x, march_y, duration=1)
-    time.sleep(1)
+    time.sleep(0.5)
     pydirectinput.click()
 
     rally_count -= 1

@@ -24,7 +24,7 @@ confirm_x = 235
 confirm_y = 720
 
 rally_count = 15
-wait_rally_time = 90  # in seconds
+wait_rally_time = 72  # in seconds
 
 
 # run the cmd as administrator to allow pydirectinput to work properly
@@ -42,22 +42,21 @@ time.sleep(1)
 print("You have 5 seconds to switch to the game window...")
 time.sleep(5)
 
+# Get the current mouse position for rally button
+rally_x, rally_y = pyautogui.position()
+
 # Click on the Pangolin or Groundhog to select it before running the script
 while rally_count > 0:
-    pyautogui.moveTo(rally_x, rally_y, duration=2)
-    time.sleep(1)
+    pyautogui.moveTo(rally_x, rally_y, duration=1)
+    time.sleep(0.5)
     pydirectinput.click()
 
     pyautogui.moveTo(confirm_x, confirm_y, duration=1)
-    time.sleep(1)
-    pydirectinput.click()
-
-    pyautogui.moveTo(ProUnit_x, ProUnit_y, duration=1)
-    time.sleep(1)
+    time.sleep(0.5)
     pydirectinput.click()
 
     pyautogui.moveTo(march_x, march_y, duration=1)
-    time.sleep(1)
+    time.sleep(0.5)
     pydirectinput.click()
 
     rally_count -= 1
