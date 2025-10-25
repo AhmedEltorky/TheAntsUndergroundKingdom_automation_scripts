@@ -24,7 +24,7 @@ confirm_x = 235
 confirm_y = 720
 
 rally_count = 15
-wait_rally_time = 72  # in seconds
+wait_rally_time = 79  # in seconds
 
 
 # run the cmd as administrator to allow pydirectinput to work properly
